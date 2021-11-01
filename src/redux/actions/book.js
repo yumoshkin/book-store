@@ -12,7 +12,7 @@ const booksError = (error) => ({
   payload: error,
 });
 
-const fetchBooks = (bookstoreService, dispatch) => () => {
+const fetchBooks = (bookstoreService) => () => (dispatch) => {
   dispatch(booksRequest());
   bookstoreService
     .getBooks()
